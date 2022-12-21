@@ -41,7 +41,7 @@ for j in range(lot):
     s = 0
     for i in range(lot):
         s += table[i][j]
-        sum_str.append(s)
+        sum_column.append(s)
 
 #создание и заполнение списка весовых коэффициентов
 list_coeff = []
