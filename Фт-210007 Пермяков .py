@@ -34,13 +34,13 @@ while True:
     except ZeroDivisionError:
         print('некорректный ввод\nповторите попытку ввода')
 
-#создание и заполнение списка сумм столбцов
-sum_column = []
+#создание и заполнение списка сумм строк
+sum_str = []
 s = 0
-for j in range(lot):
-    for i in range(lot):
+for i in range(lot):
+    for j in range(lot):
         s += table[i][j]
-    sum_column.append(s)
+    sum_str.append(s)
     s=0
     
 
@@ -48,7 +48,7 @@ for j in range(lot):
 list_coeff = []
 
 for i in range(lot):
-    list_coeff.append(math.floor((sum_column[i] / sum(sum_column)) * 100) / 100)
+    list_coeff.append(math.floor((sum_str[i] / sum(sum_str)) * 100) / 100)
 
 #сумма весовых коэффициентов и ее округление до двух знаков
 listsum = round(sum(list_coeff), 2)
