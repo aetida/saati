@@ -36,12 +36,13 @@ while True:
 
 #создание и заполнение списка сумм столбцов
 sum_column = []
-
+s = 0
 for j in range(lot):
-    s = 0
     for i in range(lot):
         s += table[i][j]
-        sum_column.append(s)
+    sum_column.append(s)
+    s=0
+    
 
 #создание и заполнение списка весовых коэффициентов
 list_coeff = []
